@@ -24,7 +24,7 @@ classifier.fit(x_train,y_train)
 predictions=classifier.predict(x_test)
 
 # #export the model
-pickle.dump(classifier, open('model.pkl','wb'))
+model = pickle.dump(classifier, open('model.pkl','wb'))
 
 # #load the model and test with a custom input
 model = pickle.load( open('model.pkl','rb'))
