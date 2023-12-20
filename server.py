@@ -18,5 +18,6 @@ print(labels)
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json(force=True)
+    print(data)
     predict = model.predict(data['feature'])
     return jsonify(predict[0].tolist())
