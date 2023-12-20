@@ -23,11 +23,14 @@ classifier=tree.DecisionTreeClassifier()
 classifier.fit(x_train,y_train)
 predictions=classifier.predict(x_test)
 
-#export the model
-pickle.dump(classifier, open('model.pkl','wb'))
+# #export the model
+# pickle.dump(classifier, open('model.pkl','wb'))
 
-#load the model and test with a custom input
-model = pickle.load( open('model.pkl','rb'))
+# #load the model and test with a custom input
+# model = pickle.load( open('model.pkl','rb'))
+
+pickle.dump(classifier, open('/app/model.pkl', 'wb'))
+model = pickle.load(open('/app/model.pkl', 'rb'))
 x = [[6.7, 3.3, 5.7, 2.1]]
 predict = model.predict(x)
 print("Hello Worlds")
