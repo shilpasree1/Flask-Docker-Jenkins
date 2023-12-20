@@ -2,8 +2,8 @@ FROM ubuntu:20.04
 
 FROM python:3.6.5
 
-RUN /bin/sh -c apt-get update -y
-RUN /bin/sh -c apt-get install -y python-pip python-dev
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev
 
 
 WORKDIR /app
